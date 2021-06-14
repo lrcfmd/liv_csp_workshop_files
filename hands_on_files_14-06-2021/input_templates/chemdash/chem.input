@@ -1,0 +1,34 @@
+# Inputs
+#
+grid_points=4,4,4
+cell_spacing=1.7320508075688772
+temp=0.025
+random_seed=3895078997303416067
+#
+# Structures to Consider
+#
+converge_first_structure=False
+num_structures=10
+max_structures=10
+#
+# GULP inputs
+#
+gulp_executable=gulp
+calculator_time_limit=120
+gulp_files=_cell, _conj,
+gulp_library=chem.lib
+num_calc_stages=3
+calculator_cores=1
+#
+# GULP Keywords and Options
+#
+gulp_keywords=opti, c6, pot
+gulp_calc_1_keywords=cellonly, conj, unfix
+gulp_calc_2_keywords=conp, conj, unfix
+gulp_calc_3_keywords=conp,
+gulp_options=time 2 minutes
+gulp_calc_1_options=stepmx 0.1
+gulp_calc_2_options=stepmx 0.1, maxcyc 250
+gulp_calc_3_options=lbfgs_order 5000, maxcyc 10000, xtol 0.075, gmax 0.075, gtol 0.075, ftol 0.075
+#
+#
